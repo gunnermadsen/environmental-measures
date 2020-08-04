@@ -56,7 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 let relativeAltitude = data?.relativeAltitude.floatValue
                 let pressure = data?.pressure.floatValue
                 
-                self.relativeAltitude.text = String.init(format: "%.1fM", relativeAltitude!)
+                self.relativeAltitude.text = String.init(format: "%.1fM", (relativeAltitude)! * 10)
                 self.pressure.text = String.init(format: "%.2f hPA", pressure!)
             })
         }
